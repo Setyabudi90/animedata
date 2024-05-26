@@ -19,12 +19,12 @@ export default function InputSearch() {
     <div className="relative">
      <input
           placeholder="Search anime..."
-          className={`p-2 w-full rounded text-black border border-color-dark outline-none`}
+          className={`p-2.5 w-full rounded text-black border border-color-dark outline-none`}
           ref={searchRef}
           onKeyDown={handleSearch}
         />
-        <button className="absolute top-2 end-2" onClick={handleSearch}>
-        <MagnifyingGlass size={24} color="black"  />
+        <button className="absolute top-[1px] end-0 bg-slate-700 py-[0.619rem] px-2" onClick={handleSearch}>
+        <MagnifyingGlass size={24} color="white"  />
        </button>
     </div>
    )

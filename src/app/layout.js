@@ -5,13 +5,13 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
 export const metadata = {
   title: "Animehh...",
-  description: "Website for anime and manga",
+  description: "Popular Anime Database",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} bg-color-dark`} suppressHydrationWarning={true}>
+      <body className={`${poppins.className} bg-slate-900`} suppressHydrationWarning={true}>
         <Navbar/>
         {children}
       </body>

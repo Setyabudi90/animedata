@@ -1,5 +1,6 @@
+
 export const AnimeResponse = async(resource, query) => {
-   const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/${resource}?${query}`)
+   let data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/${resource}?${query}`)
    const res = await data.json()
    return res
 }

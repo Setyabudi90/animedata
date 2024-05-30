@@ -8,17 +8,18 @@ export default function InputSearch() {
    const handleSearch = (e) => {
      const keyword = searchRef.current.value
      if(!keyword || keyword.trim() === "") return;
-
+      
      if(e.key === "Enter" || e.type === "click"){
        e.preventDefault()
-       router.push(`/search/${keyword}`)
+       router.push(`/search?query=${keyword}`)
        searchRef.current.value = ''
      }
    }
    return (
     <div className="relative">
      <input
-          placeholder="Search anime..."
+          id="search"
+          placeholder="search anime..."
           className={`p-2.5 w-full rounded text-black border border-color-dark outline-none`}
           ref={searchRef}
           onKeyDown={handleSearch}

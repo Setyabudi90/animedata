@@ -43,8 +43,10 @@ export default async function Page({ params: { id } }) {
             <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-sm text-indigo-500">
               Favorite: {anime.data.favorites}
             </span>
+            {window.innerWidth >= 760 ? (
             <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-sm text-indigo-500">
               Popularity: {anime.data.popularity}
+                ) : null }
             </span>
           </div>
         </div>

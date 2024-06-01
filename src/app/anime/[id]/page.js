@@ -12,7 +12,7 @@ export default async function Page({ params: { id } }) {
 
   return (
     <>
-      <div className="flex flex-col md:gap-2 py-4 md:mx-4 mx-2" ref={scrollContainerRef}>
+      <div className="flex flex-col md:gap-2 py-4 md:mx-4 mx-2">
         <h3 className="text-2xl text-color-primary">
           {anime.data.title} - {anime.data.title_japanese}
         </h3>

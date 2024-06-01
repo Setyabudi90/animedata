@@ -31,6 +31,7 @@ export default async function Page({ params: { id } }) {
             </div>
           </div>
           <div className="flex justify-center items-center p-4 text-xl font-bold overflow-x-auto md:overflow-x-visible">
+            <div className="flex space-x-2">
             <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-sm text-indigo-500">
               Score: {anime.data.score}
             </span>
@@ -45,6 +46,7 @@ export default async function Page({ params: { id } }) {
             <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-sm text-indigo-500">
               Popularity: {anime.data.popularity}
             </span>
+            </div>
           </div>
         </div>
         <div className="flex flex-col gap-2 py-4 md:justify-center justify-start">

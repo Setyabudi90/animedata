@@ -30,7 +30,7 @@ export default async function Page({ params: { id } }) {
               <VideoPlayer ytid={anime.data.trailer.youtube_id} />
             </div>
           </div>
-          <div className="flex md:justify-center justify-start items-center p-4 text-xl font-bold">
+          <div className="flex md:justify-center justify-start items-center p-4 text-xl font-bold sm:overflow-auto">
             <span className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-sm text-indigo-500">
               Score: {anime.data.score}
             </span>

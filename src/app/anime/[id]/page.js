@@ -1,17 +1,31 @@
+"use client"
 import { AnimeResponse } from "@/libs/api";
 import VideoPlayer from "@/components/utilities/VideoPlayer";
 import Image from "next/image";
 import Link from "next/link";
 import { Gabarito } from "next/font/google";
+import { useEffect, useRef } from 'react';
 
 const gabarito = Gabarito({ subsets: ["latin"] });
 export default async function Page({ params: { id } }) {
   const cleaned = id.replace(/%3D/g, '');
   const converter = atob(cleaned)
   const anime = await AnimeResponse(`anime/${converter}`);
+
+  const scrollContainerRef = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (scrollContainer) {
+      const scrollWidth = scrollContainer.scrollWidth;
+      const containerWidth = scrollContainer.clientWidth;
+      const scrollToLeft = (scrollWidth - containerWidth) / 2;
+      scrollContainer.scrollLeft = scrollToLeft;
+    }
+  }, []);
   return (
     <>
-      <div className="flex flex-col md:gap-2 py-4 md:mx-4 mx-2">
+      <div className="flex flex-col md:gap-2 py-4 md:mx-4 mx-2" ref={scrollContainerRef}>
         <h3 className="text-2xl text-color-primary">
           {anime.data.title} - {anime.data.title_japanese}
         </h3>

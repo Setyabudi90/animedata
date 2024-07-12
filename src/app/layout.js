@@ -4,8 +4,31 @@ import Navbar from "../components/Navbar";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
 export const metadata = {
-  title: "Animehh...",
-  description: "Popular Anime Database",
+  title: "Animeh - Lihat dan cari anime favoritmu",
+  description: "Animeh adalah popular anime database, cari anime dengan mudah, cepat dan aman tanpa gangguan iklan.", 
+  keywords: [
+    "anime",
+    "database",
+    "app",
+    "animelist",
+    "animehh",
+  ],
+  author: "ISB",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  openGraph: {
+    title: "Animeh - Lihat dan cari anime favorimu", 
+    image: "https://i.ibb.co.com/Sn7b3YN/dashboard-profile-logo-transformed.jpg", 
+    type: "website",
+    url: "https://animedata.vercel.app", 
+  },
+};
 };
 
 export default function RootLayout({ children }) {

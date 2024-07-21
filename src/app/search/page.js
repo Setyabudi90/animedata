@@ -9,7 +9,7 @@ const Page = async ({ searchParams: { query } }) => {
       <section>
         {anime.data.length === 0 ? (
           <p className="flex justify-center items-center min-h-screen text-2xl font-bold text-color-primary">
-            "Anime not found. Please check the name or try different keywords."
+            Anime Not Found for "{decoded}..
           </p>
         ) : (
             <Header

@@ -15,7 +15,7 @@ export default async function Home() {
       <GoogleTagManager gtmId="GTM-W4GRZ8HG" />
       <section
         data-content={btoa(~~(Math.random() * 10000) + "Content")}
-        id={~~(Math.random() * 10000) + "Popular"}
+        id={"Popular-" + ~~(Math.random() * 10000)}
       >
         <Header
           title={"Paling Populer"}
@@ -25,7 +25,7 @@ export default async function Home() {
         <AnimeList api={anime} />
       </section>
       <section data-content={btoa(~~(Math.random() * 10000) + "RekomendedContent")}
-        id={~~(Math.random() * 10000) + "PopularRekomended"}>
+        id={"PopularRekomended" + ~~(Math.random() * 10000)}>
         <Header title={"Rekomended Anime"} />
         <RekomendedAnime api={rekomendedAnime} />
       </section>

@@ -8,17 +8,17 @@ const Page = async ({ searchParams: { query } }) => {
   return (
     <>
       <section>
+         <Header
+              title={`Pencarian untuk "${decoded}"`}
+              linkHref={"/"}
+              linkTitle={"Kembali"}
+            />
         {anime.data.length === 0 ? (
           <p className="flex justify-center items-center min-h-screen text-2xl font-bold text-color-primary">
             Anime Not Found for "{decoded}"
           </p>
         ) : (
           <>
-            <Header
-              title={`Pencarian untuk "${decoded}"`}
-              linkHref={"/"}
-              linkTitle={"Kembali"}
-            />
             <AnimeList api={anime} />
           </>
         )}

@@ -36,17 +36,15 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="ltr">
     <GoogleTagManager gtmId="GTM-W4GRZ8HG" />
       <body className={`${poppins.className} bg-slate-900`} suppressHydrationWarning={true}>
-      {/* Start Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-W4GRZ8HG"
             height="0"
             width="0"
-            style="display:none;visibility:hidden"
+            style={{ display: "none", visibility: "hidden" }}
             title="noscript"
           ></iframe>
         </noscript>
-        {/* end Google Tag Manager (noscript) */}
         <Navbar/>
         {children}
       </body>

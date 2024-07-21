@@ -21,6 +21,7 @@ export default function InputSearch() {
           id="search"
           placeholder="search anime..."
           className={`p-2.5 w-full rounded text-black border border-color-dark outline-none`}
+          type="text"
           ref={searchRef}
           onKeyDown={handleSearch}
         />

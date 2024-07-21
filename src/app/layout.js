@@ -5,7 +5,7 @@ import { GoogleTagManager } from "@next/third-parties/google";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
 export const metadata = {
-  title: "Animeh - Lihat dan cari anime favoritmu dengan mudah",
+  title: "Animeh - Lihat dan Cari Anime Favoritmu dengan Mudah",
   description: "Animeh adalah popular anime database, cari anime dengan mudah, cepat dan aman tanpa gangguan iklan.", 
   keywords: [
     "anime",
@@ -24,7 +24,7 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Animeh - Lihat dan cari anime favorimu dengan mudah", 
+    title: "Animeh - Lihat dan Cari Anime Favoritmu dengan Mudah", 
     image: "https://i.ibb.co.com/Sn7b3YN/dashboard-profile-logo-transformed.jpg", 
     type: "website",
     url: "https://animedata.vercel.app", 

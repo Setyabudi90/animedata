@@ -15,7 +15,7 @@ const Page = async ({ searchParams: { query } }) => {
             />
         {anime.data.length === 0 ? (
           <p className="flex justify-center items-center min-h-screen text-2xl font-bold text-color-primary">
-            Anime Not Found. Please check your query or try different keywords
+            Anime Not Found...
           </p>
         ) : (
           <>

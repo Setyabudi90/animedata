@@ -3,7 +3,8 @@ import AnimeList from "@/components/AnimeList";
 import { AnimeResponse } from "@/libs/api";
 
 const Page = async ({ searchParams: { query } }) => {
-  const decoded = decodeURIComponent(query);
+  const q = atob(query)
+  const decoded = decodeURIComponent(q);
   const anime = await AnimeResponse("anime", `q=${decoded}`);
   return (
     <>

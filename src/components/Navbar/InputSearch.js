@@ -11,7 +11,7 @@ export default function InputSearch() {
       
      if(e.key === "Enter" || e.type === "click"){
        e.preventDefault()
-       router.push(`/search?query=${keyword}`)
+       router.push(`/search?query=${btoa(keyword)}`)
        searchRef.current.value = ''
      }
    }

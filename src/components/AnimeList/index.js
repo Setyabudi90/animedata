@@ -6,18 +6,22 @@ const AnimeList = ({ api }) => {
       {api.data?.map((anime, index) => {
         return (
           <div key={index} className="md:px-2">
-          <Link href={`/anime/${btoa(anime.mal_id)}`} className={`cursor-pointer hover:text-indigo-600 text-color-primary transition-all`}>
-            <Image
-              src={anime.images.webp.image_url}
-              alt={`IMAGE #${index}`}
-              width={350}
-              height={350}
-              className="w-full max-h-64 object-cover rounded"
-            />
-            <p className="font-bold md:text-xl px-2 text-md py-2">
-              {anime.title}
-            </p>
-          </Link>
+            <Link
+              href={`/anime/${btoa(anime.mal_id)}`}
+              className={`cursor-pointer hover:text-indigo-600 text-color-primary transition-all`}
+            >
+              <Image
+                src={anime.images.webp.image_url}
+                alt={`${btoa(index)}`}
+                width={350}
+                height={350}
+                priority={true}
+                className="w-full max-h-64 object-cover rounded"
+              />
+              <p className="font-bold md:text-xl px-2 text-md py-2">
+                {anime.title}
+              </p>
+            </Link>
           </div>
         );
       })}

@@ -12,14 +12,14 @@ export default async function Page() {
           <span className="text-indigo-400 capitalize">{user?.name} 👋</span>
         </h1>
         <p className="text-gray-300 text-center max-w-lg">
-          Discover your favorite anime, build your collections, and connect with
-          other anime enthusiasts! Let's make your anime journey unforgettable.
+          Discover your favorite anime, build your collections, and connect with 
+          other anime enthusiasts! Let&apos;s make your anime journey unforgettable.
         </p>
 
         <div className="relative group w-56 h-56">
           <Image
             src={user?.image}
-            alt="user"
+            alt={`${user?.name}'s Avatars`}
             width={224}
             height={224}
             className="rounded-full shadow-xl transition-transform duration-300 group-hover:scale-110"

@@ -1,6 +1,5 @@
 import getSession from "@/libs/users";
 import Image from "next/image";
-import Link from "next/link";
 
 export default async function Page() {
   const user = await getSession();
@@ -10,7 +9,7 @@ export default async function Page() {
       <div className="flex flex-col items-center justify-center py-10 space-y-8">
         <h1 className="text-3xl md:text-4xl font-extrabold text-center leading-relaxed">
           Welcome to the Anime World,{" "}
-          <span className="text-indigo-400 capitalize">{user.name} 👋</span>
+          <span className="text-indigo-400 capitalize">{user?.name} 👋</span>
         </h1>
         <p className="text-gray-300 text-center max-w-lg">
           Discover your favorite anime, build your collections, and connect with
@@ -19,7 +18,7 @@ export default async function Page() {
 
         <div className="relative group w-56 h-56">
           <Image
-            src={user.image}
+            src={user?.image}
             alt="user"
             width={224}
             height={224}
@@ -27,7 +26,7 @@ export default async function Page() {
             quality={100}
           />
           <div className="absolute inset-0 rounded-full bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center">
-            <p className="mb-4 text-sm text-gray-300">🌟 {user.name}</p>
+            <p className="mb-4 text-sm text-gray-300">🌟 {user?.name}</p>
           </div>
         </div>
       </div>
